@@ -1,0 +1,25 @@
+body {
+	min-height: 98vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000000;
+	text-emphasis-color: white;
+}
+
+.container {
+	color: white;
+	text-align: center;
+}
+
+.header {
+	color: white;
+}
+
+input[type=text] {
+	padding: 0.5rem;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	outline: none;
+	text-align: center;
+}
