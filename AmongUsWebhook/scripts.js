@@ -1,10 +1,9 @@
 function unmute() {
 	if (document.getElementById('mute').style.backgroundColor == 'red') {
-        document.getElementById('mute').style.backgroundColor = 'rgb(68, 1, 1)';
-        console.log("Currently unmuted")
+		document.getElementById('mute').style.backgroundColor = 'rgb(68, 1, 1)';
 	}
-    document.getElementById('unmute').style.backgroundColor = 'greenyellow';
-    document.getElementById('end').style.backgroundColor = '#02595c';
+	document.getElementById('unmute').style.backgroundColor = 'greenyellow';
+	document.getElementById('end').style.backgroundColor = '#02595c';
 
 	var request = new XMLHttpRequest();
 	request.open(
@@ -25,8 +24,7 @@ function unmute() {
 
 function mute() {
 	if (document.getElementById('unmute').style.backgroundColor == 'greenyellow') {
-        document.getElementById('unmute').style.backgroundColor = 'rgb(36, 59, 0)';
-        console.log("Currently muted")
+		document.getElementById('unmute').style.backgroundColor = 'rgb(36, 59, 0)';
 	}
 	document.getElementById('mute').style.backgroundColor = 'red';
 	document.getElementById('end').style.backgroundColor = '#02595c';
@@ -49,9 +47,11 @@ function mute() {
 }
 
 function end() {
-    document.getElementById('unmute').style.backgroundColor = 'rgb(36, 59, 0)';
-    document.getElementById('mute').style.backgroundColor = 'rgb(68, 1, 1)';
-    document.getElementById('end').style.backgroundColor = '#65DFE4';
+	document.getElementById('unmute').style.backgroundColor = 'rgb(36, 59, 0)';
+	document.getElementById('mute').style.backgroundColor = 'rgb(68, 1, 1)';
+	document.getElementById('end').style.backgroundColor = '#65DFE4';
+	resetPlayers();
+
 	var request = new XMLHttpRequest();
 	request.open(
 		'POST',
@@ -63,7 +63,7 @@ function end() {
 	var params = {
 		username: 'My Webhook Name',
 		avatar_url: '',
-		content: 'auwebhook end 756077054562271277'
+		content: 'au$webhook end 756077054562271277'
 	};
 
 	request.send(JSON.stringify(params));
@@ -82,8 +82,8 @@ function dead(userid) {
 		username: 'My Webhook Name',
 		avatar_url: '',
 		content: `au dead <@${userid}>`
-    };
-    request.send(JSON.stringify(params));
+	};
+	request.send(JSON.stringify(params));
 }
 
 function revive(userid) {
@@ -99,16 +99,22 @@ function revive(userid) {
 		username: 'My Webhook Name',
 		avatar_url: '',
 		content: `au revive <@${userid}>`
-    };
-    request.send(JSON.stringify(params));
+	};
+	request.send(JSON.stringify(params));
 }
 
 function player(userid) {
 	if (document.getElementById(event.target.id).style.backgroundColor == 'red') {
-        document.getElementById(event.target.id).style.backgroundColor = ' #37c42a';
-        revive(userid);
+		document.getElementById(event.target.id).style.backgroundColor = ' #37c42a';
+		revive(userid);
 	} else {
-        document.getElementById(event.target.id).style.backgroundColor = 'red';
-        dead(userid);
+		document.getElementById(event.target.id).style.backgroundColor = 'red';
+		dead(userid);
+	}
+}
+
+function resetPlayers() {
+	for (let index = 1; index <= document.getElementsByClassName('bUsers').length; index++) {
+		document.getElementById(index).style.backgroundColor = '#37c42a';
 	}
 }
