@@ -15,4 +15,4 @@ Below you will find a explanation to what each website does
 
 - **[HexErzeuger](/HexErzeuger)**: When the button is clicked, the background changes to a randome color, and the corresponding hex code is put above the button as text
 
-- **[RGB-Anzeige](/RGB-Anzeige)**: **[!Work in Progress!]** Takes the input of the three sliders for each of the 3 rgb values and changes the background to the corresponding color.
+- **[RGB-Anzeige](/RGB-Anzeige)**: Takes the input of the three sliders for each of the 3 rgb values and changes the background to the corresponding color.
