@@ -63,7 +63,7 @@ function end() {
 	var params = {
 		username: 'My Webhook Name',
 		avatar_url: '',
-		content: 'au$webhook end 756077054562271277'
+		content: 'auwebhook end 756077054562271277'
 	};
 
 	request.send(JSON.stringify(params));
