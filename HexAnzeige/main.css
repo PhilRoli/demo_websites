@@ -11,7 +11,7 @@ body {
 	text-align: center;
 }
 
-.header {
+.hex {
 	color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
@@ -23,4 +23,26 @@ input[type=text] {
 	font-size: 1.5rem;
 	outline: none;
 	text-align: center;
+}
+
+.LastColors {
+	color: white;
+	width: 20%;
+	margin: 0px;
+	float: left;
+	font-size: 1.5rem;
+	text-align: center;
+	min-height: 60px;
+	text-align: center;
+	padding-top: 40px;
+	
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid black;
 }
