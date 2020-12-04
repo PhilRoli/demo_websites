@@ -11,7 +11,7 @@ Below you will find a explanation to what each website does
 
 ---
 
-- **[Discord-Webhook](./Discord-Webhook)**: Used to trigger webhook Commands of a Among Us Bot on my Server trough a easy to use website with buttons.
+- **[Discord-Webhook](/AmongUsWebhook)**: Used to trigger webhook Commands of a Among Us Bot on my Server trough a easy to use website with buttons.
 
 - **[HexAnzeige](/HexAnzeige)**: This website takes a hex color as input, if vaild input it changes the background color to the given input
 
