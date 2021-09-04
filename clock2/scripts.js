@@ -23,3 +23,22 @@ function addZero(time) {
 }
 
 setInterval(showTime, 1000);
+
+function refresh(node) {
+	var times = 1000; // gap in Milli Seconds;
+
+	(function startRefresh() {
+		var address;
+		if (node.src.indexOf('?') > -1) address = node.src.split('?')[0];
+		else address = node.src;
+		node.src = address + '?time=' + new Date().getTime();
+
+		setTimeout(startRefresh, times);
+	})();
+}
+
+window.onload = function() {
+	var node = document.getElementById('spotify');
+	refresh(node);
+	// you can refresh as many images you want just repeat above steps
+};
