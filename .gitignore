@@ -3,3 +3,6 @@ out
 .git
 auth.*
 Tutorial
+TankTactics
+generator.js
+.vscode

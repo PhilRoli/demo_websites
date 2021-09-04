@@ -1,0 +1,19 @@
+body {
+	min-height: 98vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+}
+
+#spotify {
+	position: absolute;
+	top: 1%;
+	right: 1%;
+}
+
+#date {
+	position: absolute;
+	bottom: 5%;
+	left: 1%;
+}
